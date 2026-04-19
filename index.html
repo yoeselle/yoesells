@@ -853,12 +853,22 @@
   }
 
   /* ABOUT */
-  .about-grid {
+  .about-top {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 60px;
     margin-top: 48px;
+    margin-bottom: 64px;
     align-items: start;
+  }
+
+  .about-bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 2.2fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: start;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
   }
 
   .about-photo {
@@ -868,7 +878,6 @@
     border: 1px solid rgba(79,123,157,0.2);
     border-radius: 16px;
     overflow: hidden;
-    margin-bottom: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -885,19 +894,20 @@
     z-index: 1;
   }
 
-  .about-text p {
+  .about-paragraphs p {
     font-size: 16px;
     color: var(--muted);
     line-height: 1.8;
     margin-bottom: 20px;
   }
+  .about-paragraphs p:last-child { margin-bottom: 0; }
 
-  .about-text p strong {
+  .about-paragraphs p strong {
     color: var(--ink);
     font-weight: 500;
   }
 
-  .about-details { }
+  .about-bottom .detail-block { margin-bottom: 0; }
 
   .detail-block {
     margin-bottom: 36px;
@@ -1051,8 +1061,9 @@
     .nav-links { display: none; }
     .hero { padding: 100px 24px 60px; }
     section { padding: 60px 24px; }
-    .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 40px; }
-    .about-photo { max-width: 360px; margin: 0 auto 32px; }
+    .about-top, .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .about-bottom { grid-template-columns: 1fr; gap: 40px; padding-top: 40px; }
+    .about-photo { max-width: 360px; margin: 0 auto; }
     .work-item { grid-template-columns: 1fr; gap: 12px; }
     .work-date { text-align: left; }
     .work-photos { grid-template-columns: 1fr; }
@@ -1369,66 +1380,66 @@
   <p class="section-label">Background</p>
   <h2 class="section-title">About <em>me</em></h2>
 
-  <div class="about-grid">
-    <div class="about-text fade-up">
-      <div class="about-photo">
-        <!-- Drop a portrait into this folder named "yoesel-about.jpg" and it will appear here automatically. -->
-        <img src="yoesel-about.jpg" alt="Yoesel Ugyendema" onerror="this.remove();">
-        <div class="photo-placeholder">
-          <span class="ph-eyebrow">A portrait of me</span>
-          Save a photo as<br>
-          <code>yoesel-about.jpg</code><br>
-          in this folder
-        </div>
+  <div class="about-top">
+    <div class="about-photo fade-up">
+      <!-- Drop a portrait into this folder named "yoesel-about.jpg" and it will appear here automatically. -->
+      <img src="yoesel-about.jpg" alt="Yoesel Ugyendema" onerror="this.remove();">
+      <div class="photo-placeholder">
+        <span class="ph-eyebrow">A portrait of me</span>
+        Save a photo as<br>
+        <code>yoesel-about.jpg</code><br>
+        in this folder
       </div>
+    </div>
+    <div class="about-paragraphs fade-up">
       <p>I'm Yoesel, a <strong>first-year Computer Science student at Curtin</strong>, a content strategist, and a filmmaker. I've got a foot in both the technical and creative worlds, and that's honestly my favourite part: I get to solve problems from both sides.</p>
       <p>On the technical side I'm still early in my coding journey, but <strong>problem-solving is where I'm strongest</strong>. I break things down quickly, find the angle nobody's looked at yet, and figure out how to ship. Comfortable with logic, systems thinking, and using AI tools to move faster on whatever I'm building.</p>
       <p>I've been making content since I was ten. YouTube vlogs, travel TikToks, late-night edits that definitely went past bedtime. What started as a hobby became a way of thinking. Now I help brands show up online with <strong>intentional, strategic content that actually means something</strong> to the people watching.</p>
       <p>I work best when the people I'm working with feel comfortable. No jargon, no mystery, no gatekeeping, just honest conversations, clear thinking, and work I'm proud to put my name on. Whether you're a founder, a team, or a fellow creative, I'd love to hear what you're building.</p>
     </div>
+  </div>
 
-    <div class="about-details fade-up">
-      <div class="detail-block">
-        <p class="detail-label">Education</p>
-        <div class="detail-item">
-          <span>Bachelor of Computing, CS</span>
-          <span style="color:var(--muted);font-size:12px;white-space:nowrap">Curtin · 2026–Present</span>
-        </div>
-        <div class="detail-item">
-          <span>WACE (ATAR)</span>
-          <span style="color:var(--muted);font-size:12px">Bob Hawke College</span>
-        </div>
+  <div class="about-bottom">
+    <div class="detail-block fade-up">
+      <p class="detail-label">Education</p>
+      <div class="detail-item">
+        <span>Bachelor of Computing, CS</span>
+        <span style="color:var(--muted);font-size:12px;white-space:nowrap">Curtin · 2026–Present</span>
       </div>
+      <div class="detail-item">
+        <span>WACE (ATAR)</span>
+        <span style="color:var(--muted);font-size:12px">Bob Hawke College</span>
+      </div>
+    </div>
 
-      <div class="detail-block">
-        <p class="detail-label">Skills</p>
-        <div class="skills-wrap">
-          <span class="skill-pill">Problem Solving</span>
-          <span class="skill-pill">Systems Thinking</span>
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">HTML &amp; CSS</span>
-          <span class="skill-pill">Git</span>
-          <span class="skill-pill">AI Tools</span>
-          <span class="skill-pill">Content Strategy</span>
-          <span class="skill-pill">Social Media Management</span>
-          <span class="skill-pill">Videography</span>
-          <span class="skill-pill">Copywriting</span>
-          <span class="skill-pill">Event Coordination</span>
-          <span class="skill-pill">Canva</span>
-          <span class="skill-pill">CapCut</span>
-          <span class="skill-pill">Notion</span>
-          <span class="skill-pill">Instagram</span>
-          <span class="skill-pill">TikTok</span>
-          <span class="skill-pill">LinkedIn</span>
-        </div>
+    <div class="detail-block fade-up">
+      <p class="detail-label">Skills</p>
+      <div class="skills-wrap">
+        <span class="skill-pill">Problem Solving</span>
+        <span class="skill-pill">Systems Thinking</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">HTML &amp; CSS</span>
+        <span class="skill-pill">Git</span>
+        <span class="skill-pill">AI Tools</span>
+        <span class="skill-pill">Content Strategy</span>
+        <span class="skill-pill">Social Media Management</span>
+        <span class="skill-pill">Videography</span>
+        <span class="skill-pill">Copywriting</span>
+        <span class="skill-pill">Event Coordination</span>
+        <span class="skill-pill">Canva</span>
+        <span class="skill-pill">CapCut</span>
+        <span class="skill-pill">Notion</span>
+        <span class="skill-pill">Instagram</span>
+        <span class="skill-pill">TikTok</span>
+        <span class="skill-pill">LinkedIn</span>
       </div>
+    </div>
 
-      <div class="detail-block">
-        <p class="detail-label">Activities</p>
-        <div class="detail-item"><span>ComSSA Marketing & Events</span></div>
-        <div class="detail-item"><span>WAITTA Volunteer</span></div>
-        <div class="detail-item"><span>Curtin Robotics Club</span></div>
-      </div>
+    <div class="detail-block fade-up">
+      <p class="detail-label">Activities</p>
+      <div class="detail-item"><span>ComSSA Marketing & Events</span></div>
+      <div class="detail-item"><span>WAITTA Volunteer</span></div>
+      <div class="detail-item"><span>Curtin Robotics Club</span></div>
     </div>
   </div>
 </section>
