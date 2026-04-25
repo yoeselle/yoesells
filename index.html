@@ -1044,6 +1044,366 @@
     letter-spacing: 0.05em;
   }
 
+  /* PRICING */
+  .pricing-intro {
+    max-width: 620px;
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  .trial-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px 28px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 56px;
+  }
+
+  .trial-banner .t-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    font-weight: 400;
+    flex-shrink: 0;
+    padding-top: 3px;
+  }
+
+  .trial-banner .t-text {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .trial-banner .t-text strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 64px;
+  }
+
+  .package {
+    background: var(--warm-white);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease;
+    position: relative;
+  }
+
+  .package:hover {
+    background: var(--blue-ice);
+  }
+
+  .package.featured {
+    background: var(--cream);
+  }
+
+  .package.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .pkg-badge {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+
+  .pkg-name {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .pkg-tagline {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .pkg-price-block {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pkg-price {
+    font-family: var(--serif);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .pkg-price sup {
+    font-size: 22px;
+    vertical-align: super;
+    font-family: var(--sans);
+    font-weight: 300;
+    color: var(--muted);
+  }
+
+  .pkg-period {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .pkg-trial {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(139,47,59,0.22);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+
+  .pkg-trial strong {
+    color: var(--accent-dark);
+    font-weight: 500;
+  }
+
+  .pkg-trial small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.8;
+    margin-bottom: 4px;
+  }
+
+  .pkg-breakdown-title {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  .breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .breakdown-row:last-of-type { border-bottom: none; }
+
+  .breakdown-item {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .breakdown-item small {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    opacity: 0.75;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  .breakdown-price {
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .breakdown-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    margin-top: 4px;
+    border-top: 1px solid var(--border);
+  }
+
+  .breakdown-total .bt-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .breakdown-total .bt-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-dark);
+  }
+
+  .pkg-includes {
+    list-style: none;
+    margin-top: 22px;
+    padding: 0;
+  }
+
+  .pkg-includes li {
+    font-size: 13px;
+    color: var(--muted);
+    padding: 6px 0;
+    display: flex;
+    gap: 10px;
+    line-height: 1.5;
+  }
+
+  .pkg-includes li::before {
+    content: '—';
+    color: var(--blue-deep);
+    flex-shrink: 0;
+  }
+
+  .pkg-includes li.highlight-item { color: var(--ink); }
+
+  .pricing-subheading {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    letter-spacing: -0.005em;
+  }
+  .pricing-subheading em { font-style: italic; color: var(--accent-dark); }
+
+  .pricing-subnote {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 620px;
+    margin-bottom: 28px;
+  }
+
+  .pricing-footnote {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    margin-top: -40px;
+    margin-bottom: 64px;
+    padding-left: 16px;
+    border-left: 2px solid var(--blue-mid);
+  }
+
+  .addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 64px;
+  }
+
+  .addon {
+    background: var(--warm-white);
+    padding: 22px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: background 0.3s ease;
+  }
+
+  .addon:hover { background: var(--blue-ice); }
+
+  .addon-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .addon-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .addon-price {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--accent-dark);
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-align: right;
+    line-height: 1.1;
+  }
+
+  .addon-price .unit {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 400;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .pricing-notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .note-title {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  .note-text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .note-text a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139,47,59,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .note-text a:hover { border-bottom-color: var(--accent-dark); }
+
   /* FADE IN ANIMATION */
   .fade-up {
     opacity: 0;
@@ -1071,6 +1431,10 @@
     .work-item { grid-template-columns: 1fr; gap: 12px; }
     .work-date { text-align: left; }
     .work-photos { grid-template-columns: 1fr; }
+    .packages-grid { grid-template-columns: 1fr; }
+    .addons-grid { grid-template-columns: 1fr; }
+    .pricing-notes { grid-template-columns: 1fr; gap: 32px; }
+    .trial-banner { flex-direction: column; gap: 12px; }
     footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
   }
 </style>
@@ -1084,6 +1448,7 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1375,6 +1740,306 @@
       <div class="work-date">2025</div>
     </div>
 
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <p class="section-label">Packages & rates</p>
+  <h2 class="section-title">Transparent <em>pricing,</em> real deliverables</h2>
+  <p class="pricing-intro fade-up">Every package is built from real work — strategy, captions, reel briefs, reporting. No guesswork, no hidden extras. All prices in AUD.</p>
+
+  <div class="trial-banner fade-up">
+    <div class="t-label">Trial month</div>
+    <div class="t-text">New clients start with a <strong>trial month at 30% off</strong> so we can work together and confirm the right fit before committing. Trial rate shown on each package below. No lock-in, and full scope and ongoing rate confirmed in writing before we begin.</div>
+  </div>
+
+  <h3 class="pricing-subheading">Monthly <em>packages</em></h3>
+  <div class="packages-grid fade-up">
+
+    <!-- Starter -->
+    <div class="package">
+      <p class="pkg-badge">Essentials</p>
+      <h3 class="pkg-name">Starter</h3>
+      <p class="pkg-tagline">For brands getting started with consistent content.</p>
+      <div class="pkg-price-block">
+        <div class="pkg-price"><sup>$</sup>900</div>
+        <p class="pkg-period">per month · AUD</p>
+        <div class="pkg-trial">
+          <small>Trial month · 30% off</small>
+          <strong>$630</strong> for your first month
+        </div>
+      </div>
+
+      <p class="pkg-breakdown-title">What's included · priced out</p>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Weekly posting schedule design</span>
+        <span class="breakdown-price">$40</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Monthly content calendar <small>6 feed posts, 4 Stories, 1 LinkedIn post</small></span>
+        <span class="breakdown-price">$80</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Caption copywriting <small>all feed posts</small></span>
+        <span class="breakdown-price">$150</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Instagram profile optimisation <small>bio, name SEO, Highlights brief</small></span>
+        <span class="breakdown-price">$50</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Notion workspace setup <small>task board, content calendar, idea bank</small></span>
+        <span class="breakdown-price">$40</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Monthly report framework</span>
+        <span class="breakdown-price">$40</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Beacons link-in-bio brief</span>
+        <span class="breakdown-price">$30</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Ongoing management &amp; community</span>
+        <span class="breakdown-price">$470</span>
+      </div>
+      <div class="breakdown-total">
+        <span class="bt-label">Package total</span>
+        <span class="bt-price">$900 / mo</span>
+      </div>
+
+      <ul class="pkg-includes">
+        <li>1 platform (Instagram or LinkedIn)</li>
+        <li>All content approved before posting</li>
+        <li>2 revision rounds per deliverable</li>
+        <li>No reel briefs included</li>
+      </ul>
+    </div>
+
+    <!-- Growth (featured) -->
+    <div class="package featured">
+      <p class="pkg-badge">Most popular · Standard</p>
+      <h3 class="pkg-name">Growth</h3>
+      <p class="pkg-tagline">For brands ready to grow with consistent, strategic content.</p>
+      <div class="pkg-price-block">
+        <div class="pkg-price"><sup>$</sup>1,500</div>
+        <p class="pkg-period">per month · AUD</p>
+        <div class="pkg-trial">
+          <small>Trial month · 30% off</small>
+          <strong>$1,050</strong> for your first month
+        </div>
+      </div>
+
+      <p class="pkg-breakdown-title">What's included · priced out</p>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Everything in Starter</span>
+        <span class="breakdown-price">$900</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">10-post rotation cycle design <small>pillar + format rules</small></span>
+        <span class="breakdown-price">$50</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Footage audit framework <small>scene-by-scene brief system</small></span>
+        <span class="breakdown-price">$40</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Reel production briefs · up to 4 <small>scene briefs, hooks, overlays, edit specs</small></span>
+        <span class="breakdown-price">$240</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">2nd platform management <small>e.g. Instagram + LinkedIn</small></span>
+        <span class="breakdown-price">$270</span>
+      </div>
+      <div class="breakdown-total">
+        <span class="bt-label">Package total</span>
+        <span class="bt-price">$1,500 / mo</span>
+      </div>
+
+      <ul class="pkg-includes">
+        <li class="highlight-item">2 platforms managed</li>
+        <li class="highlight-item">Up to 4 reel production briefs</li>
+        <li>All content approved before posting</li>
+        <li>2 revision rounds per deliverable</li>
+        <li>Notion workspace + content tracker</li>
+        <li>Monthly report</li>
+      </ul>
+    </div>
+
+    <!-- Premium -->
+    <div class="package">
+      <p class="pkg-badge">Full service</p>
+      <h3 class="pkg-name">Premium</h3>
+      <p class="pkg-tagline">For brands wanting a fully built-out content system.</p>
+      <div class="pkg-price-block">
+        <div class="pkg-price"><sup>$</sup>2,200</div>
+        <p class="pkg-period">per month · AUD</p>
+        <div class="pkg-trial">
+          <small>Trial month · 30% off</small>
+          <strong>$1,540</strong> for your first month
+        </div>
+      </div>
+
+      <p class="pkg-breakdown-title">What's included · priced out</p>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Everything in Growth</span>
+        <span class="breakdown-price">$1,500</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Brand strategy development <small>EPIC framework, 6 content series, audience mapping</small></span>
+        <span class="breakdown-price">$200</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Reel production briefs · up to 6 <small>+2 extra briefs on top of Growth</small></span>
+        <span class="breakdown-price">$120</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">3rd platform + Stories rhythm <small>Instagram, Facebook, LinkedIn</small></span>
+        <span class="breakdown-price">$220</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-item">Full Notion brand bible + asset tracker</span>
+        <span class="breakdown-price">$160</span>
+      </div>
+      <div class="breakdown-total">
+        <span class="bt-label">Package total</span>
+        <span class="bt-price">$2,200 / mo</span>
+      </div>
+
+      <ul class="pkg-includes">
+        <li class="highlight-item">3 platforms managed</li>
+        <li class="highlight-item">Up to 6 reel production briefs</li>
+        <li>Full brand strategy from scratch</li>
+        <li>Complete Notion brand bible</li>
+        <li>All content approved before posting</li>
+        <li>Monthly strategy review</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h3 class="pricing-subheading">Creative <em>production</em></h3>
+  <p class="pricing-subnote fade-up">For one-off shoots, campaigns, or content top-ups outside a monthly retainer. Priced by the hour, half-day, day, or deliverable — whatever fits the job.</p>
+  <div class="addons-grid fade-up">
+    <div class="addon">
+      <div>
+        <div class="addon-name">Content creation &amp; consultation</div>
+        <div class="addon-desc">Strategy calls, caption writing, content audits, light edits — hourly, when you just need a hand</div>
+      </div>
+      <div class="addon-price">$75<span class="unit">per hour</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Reel edit</div>
+        <div class="addon-desc">Supply your footage — I cut, caption and colour. Turnaround 3–5 days</div>
+      </div>
+      <div class="addon-price">$120<span class="unit">per reel</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Reel · full production</div>
+        <div class="addon-desc">Concept, direction, shoot, edit, captions — the whole thing, done for you</div>
+      </div>
+      <div class="addon-price">$250<span class="unit">per reel</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Half-day shoot</div>
+        <div class="addon-desc">Up to 4 hrs on location, Perth metro — product, event, lifestyle, or content day</div>
+      </div>
+      <div class="addon-price">$400<span class="unit">per half-day</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Full-day shoot</div>
+        <div class="addon-desc">Up to 8 hrs on location, Perth metro — campaign shoots, full content days</div>
+      </div>
+      <div class="addon-price">$700<span class="unit">per day</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Founder story / brand film</div>
+        <div class="addon-desc">Short-form brand film (under 3 min). Direction, shoot, edit — quoted after a brief call</div>
+      </div>
+      <div class="addon-price">from $600<span class="unit">per film</span></div>
+    </div>
+  </div>
+  <p class="pricing-footnote">Travel outside Perth metro and rush turnarounds quoted separately. Footage rights and raw files negotiated per project.</p>
+
+  <h3 class="pricing-subheading">À la carte <em>add-ons</em></h3>
+  <div class="addons-grid fade-up">
+    <div class="addon">
+      <div>
+        <div class="addon-name">Brand strategy development</div>
+        <div class="addon-desc">EPIC framework, content pillars, 6 content series, audience mapping</div>
+      </div>
+      <div class="addon-price">$60<span class="unit">once-off</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Reel production brief</div>
+        <div class="addon-desc">Scene briefs, hook options, text overlays, edit specs — per reel</div>
+      </div>
+      <div class="addon-price">$25<span class="unit">per reel</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Instagram profile optimisation</div>
+        <div class="addon-desc">Bio copy, name field SEO, Story Highlights structure &amp; covers brief</div>
+      </div>
+      <div class="addon-price">$30<span class="unit">once-off</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">10-post rotation cycle design</div>
+        <div class="addon-desc">Pillar and format rules mapped across a 10-post repeating cycle</div>
+      </div>
+      <div class="addon-price">$30<span class="unit">once-off</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Notion workspace setup</div>
+        <div class="addon-desc">Task board, content calendar, caption library, asset tracker &amp; more</div>
+      </div>
+      <div class="addon-price">$20<span class="unit">once-off</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Beacons link-in-bio brief</div>
+        <div class="addon-desc">Page structure, sections, analytics setup guidance</div>
+      </div>
+      <div class="addon-price">$20<span class="unit">once-off</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Footage audit framework</div>
+        <div class="addon-desc">Scene-by-scene brief system using your existing footage gallery</div>
+      </div>
+      <div class="addon-price">$20<span class="unit">once-off</span></div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Monthly report</div>
+        <div class="addon-desc">Executive summary, results table, top posts, learnings, next month plan</div>
+      </div>
+      <div class="addon-price">$20<span class="unit">per month</span></div>
+    </div>
+  </div>
+
+  <div class="pricing-notes fade-up">
+    <div>
+      <p class="note-title">Approval</p>
+      <p class="note-text">Every piece of content comes to you for review before it goes live. You stay in full editorial control. Two revision rounds included per deliverable.</p>
+    </div>
+    <div>
+      <p class="note-title">Payment</p>
+      <p class="note-text">Invoices issued monthly, due within 14 days. All prices in AUD and GST-exclusive.</p>
+    </div>
+    <div>
+      <p class="note-title">Custom scope</p>
+      <p class="note-text">Not sure which package fits? <a href="#contact">Get in touch</a> and we'll figure it out together. Everything can be tailored.</p>
+    </div>
   </div>
 </section>
 
