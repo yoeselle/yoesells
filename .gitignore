@@ -2,6 +2,10 @@
 aws/
 *.private.md
 notes/
+.env
+.env.*
+!.env.example
+r2.env
 
 # macOS junk
 .DS_Store
