@@ -7,6 +7,10 @@ notes/
 !.env.example
 r2.env
 
+# Portfolio media is served from Cloudflare R2
+*.mp4
+*.webp
+
 # macOS junk
 .DS_Store
 .AppleDouble
